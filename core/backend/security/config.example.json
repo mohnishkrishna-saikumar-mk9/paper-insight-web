@@ -1,0 +1,11 @@
+{
+  "secrets": {
+    "llm_api_key": "YOUR_LLM_API_KEY"
+  },
+  "webauthn_credential": {
+    "id": "sample_credential_id",
+    "public_key": "sample_public_key",
+    "sign_count": 0
+  },
+  "pin_hash": "sample_sha256_pin_hash"
+}

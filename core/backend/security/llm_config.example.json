@@ -1,0 +1,11 @@
+{
+  "mode": "omniroute",
+  "omniroute": {
+    "base_url": "http://localhost:20128/v1",
+    "combo": "Research Paper"
+  },
+  "direct": {
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-4o"
+  }
+}

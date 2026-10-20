@@ -1,0 +1,109 @@
+# ==============================================================================
+# PaperInsight AI - Git Ignore Configuration
+# ==============================================================================
+
+# Node.js & Next.js
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+build/
+dist/
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.vercel
+
+# Python & Virtual Environments
+venv/
+**/venv/
+.venv/
+**/.venv/
+env/
+**/env/
+ENV/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+uvicorn.log
+*.log
+
+# Sensitive Credentials & API Keys (DO NOT COMMIT)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+core/.env*
+!core/.env.example
+*.pem
+*.key
+
+# Backend Authentication & Secret Vaults
+core/backend/keys/user_profile.json
+!core/backend/keys/user_profile.example.json
+core/backend/security/config.json
+!core/backend/security/config.example.json
+core/backend/security/master_password.txt
+core/backend/security/secret_phrase.txt
+
+# Local Runtime Databases & Generated Embeddings
+core/backend/data/faiss_indexes/
+core/backend/data/extracted_images/
+core/backend/data/graphs/
+core/backend/data/projects_db.json
+core/backend/data/tasks_db.json
+core/backend/data/user_memory.json
+core/backend/data/*.pdf
+core/backend/data/*.png
+core/backend/data/*.jpg
+
+# Leftover empty directories from root executions
+/data/
+/keys/
+/security/
+
+# Archives, Zips & Temporary Scratch Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+paper-insight-web.zip
+image.png
+upscale_image.py
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

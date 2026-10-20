@@ -1,0 +1,11 @@
+{
+  "name": "Principal Investigator",
+  "role": "Administrator",
+  "institution": "Global Research Institute",
+  "department": "Advanced AI Lab",
+  "avatarBase64": null,
+  "apiKeys": [
+    "YOUR_GROQ_API_KEY"
+  ],
+  "openaiKey": "YOUR_OPENAI_API_KEY"
+}
