@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
 [![LangChain](https://img.shields.io/badge/LangChain-Orchestration-1C3C3C?style=for-the-badge)](https://langchain.com/)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector%20Database-blue?style=for-the-badge)](https://github.com/facebookresearch/faiss)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
+[![Academic Research](https://img.shields.io/badge/Project-Academic%20Research-blueviolet?style=for-the-badge)](#-authors--academic-attribution)
 [![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Local%20Index-success?style=for-the-badge)](./docs/TECHNICAL_DOCUMENTATION.md)
 
 <p align="center">
@@ -37,12 +37,9 @@ Modern scientific research demands sifting through hundreds of dense, multi-colu
 
 PaperInsight operates on a decoupled client-server architecture with zero external database dependencies. All indexes and databases reside strictly on the local filesystem.
 
-<p align="center">
-  <a href="./screenshots/01_architecture_diagram.png">
-    <img src="./screenshots/01_architecture_diagram.png" alt="PaperInsight System Architecture" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 1: Full-stack Architectural Topology (Frontend, FastAPI Services, Local Storage & Inference Pipeline) — Click to view in full resolution.</i></p>
+![Figure 1: PaperInsight System Architecture](screenshots/01_architecture_diagram.png)
+
+*Figure 1: Full-stack Architectural Topology (Frontend, FastAPI Services, Local Storage & Inference Pipeline)*
 
 ### Architectural Highlights
 1. **Frontend Layer (Next.js 14):** Modern React App Router interface built with custom dark/light UI tokens, fluid typography (`Hanken Grotesk` & `Literata`), optimistic UI updates, and real-time polling.
@@ -67,12 +64,9 @@ PaperInsight operates on a decoupled client-server architecture with zero extern
 #### 1. Main Project Dashboard Overview
 The centralized command center provides a bird's-eye view of all research projects, active vector indices, and real-time backend/OmniRoute connectivity status.
 
-<p align="center">
-  <a href="./screenshots/02_project_dashboard_empty.png">
-    <img src="./screenshots/02_project_dashboard_empty.png" alt="Figure 2: PaperInsight Dashboard Overview" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 2: Main dashboard interface showcasing system health monitors, active provider status, and research project cards.</i></p>
+![Figure 2: PaperInsight Dashboard Overview](screenshots/02_project_dashboard_empty.png)
+
+*Figure 2: Main dashboard interface showcasing system health monitors, active provider status, and research project cards.*
 
 * **System Status Header:** Displays real-time API health, local vector store readiness, and configured LLM provider fallback.
 * **Workspace Cards:** Each project displays its primary domain scope, document count, last updated timestamp, and quick launch triggers.
@@ -83,12 +77,9 @@ The centralized command center provides a bird's-eye view of all research projec
 #### 2. Research Project Creation & Scope Definition
 Defining an isolated research workspace with targeted domain keywords and specific research problem statements to guide retrieval grounding.
 
-<p align="center">
-  <a href="./screenshots/03_create_project_modal.png">
-    <img src="./screenshots/03_create_project_modal.png" alt="Figure 3: Research Project Creation Modal" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 3: Project configuration modal specifying project title, description, and target research boundaries.</i></p>
+![Figure 3: Research Project Creation Modal](screenshots/03_create_project_modal.png)
+
+*Figure 3: Project configuration modal specifying project title, description, and target research boundaries.*
 
 * **Isolated Context Boundaries:** Ensures literature uploaded to one project never contaminates or skews retrieval results of another.
 * **Research Focus Guidance:** Pre-conditions the agent's semantic query expansion around the user's specific problem statement.
@@ -100,12 +91,9 @@ Defining an isolated research workspace with targeted domain keywords and specif
 #### 3. Initial Project Workspace
 The clean workspace view before manuscript ingestion, featuring intuitive drag-and-drop targets and document management controls.
 
-<p align="center">
-  <a href="./screenshots/04_project_workspace_initial.png">
-    <img src="./screenshots/04_project_workspace_initial.png" alt="Figure 4: Initial Project Workspace View" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 4: Fresh workspace ready for manuscript upload with navigation tabs (Overview, Papers, RAG Chat, Deep Research).</i></p>
+![Figure 4: Initial Project Workspace View](screenshots/04_project_workspace_initial.png)
+
+*Figure 4: Fresh workspace ready for manuscript upload with navigation tabs (Overview, Papers, RAG Chat, Deep Research).*
 
 * **Multi-Tab Architecture:** Seamless navigation between document repository, grounded chat, autonomous deep research, and literature matrix generation.
 * **Storage Metrics:** Live tracking of local storage footprint and parsed document tokens.
@@ -115,12 +103,9 @@ The clean workspace view before manuscript ingestion, featuring intuitive drag-a
 #### 4. Batch Selection of Research Manuscripts
 Uploading multiple complex, multi-column scientific PDF papers simultaneously via native file dialog.
 
-<p align="center">
-  <a href="./screenshots/05_pdf_batch_upload.png">
-    <img src="./screenshots/05_pdf_batch_upload.png" alt="Figure 5: Batch PDF File Upload" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 5: Ingesting an 8-paper academic benchmark collection on Traffic Sign Recognition with Deep Learning.</i></p>
+![Figure 5: Batch PDF File Upload](screenshots/05_pdf_batch_upload.png)
+
+*Figure 5: Ingesting an 8-paper academic benchmark collection on Traffic Sign Recognition with Deep Learning.*
 
 * **High-Throughput Ingestion:** Supports simultaneous multi-paper uploads without freezing the UI.
 * **Format Flexibility:** Accommodates IEEE, ACM, arXiv, and Springer multi-column formatted research papers.
@@ -130,12 +115,9 @@ Uploading multiple complex, multi-column scientific PDF papers simultaneously vi
 #### 5. Local Vector Indexing Complete & Papers Ready
 Synchronous local processing pipeline parsing PDF layouts, recursive semantic chunking, and embedding generation into FAISS.
 
-<p align="center">
-  <a href="./screenshots/06_papers_indexed_and_ready.png">
-    <img src="./screenshots/06_papers_indexed_and_ready.png" alt="Figure 6: Indexed Academic Literature Library" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 6: Indexed paper repository displaying file metadata, extraction status, chunk statistics, and relevance flags.</i></p>
+![Figure 6: Indexed Academic Literature Library](screenshots/06_papers_indexed_and_ready.png)
+
+*Figure 6: Indexed paper repository displaying file metadata, extraction status, chunk statistics, and relevance flags.*
 
 * **Zero Cloud Transfer:** All 8 papers embedded in memory with `all-MiniLM-L6-v2` in **under 3.2 seconds**.
 * **Document Management:** Individual paper deletion, status verification, and chunk inspection tools.
@@ -147,12 +129,9 @@ Synchronous local processing pipeline parsing PDF layouts, recursive semantic ch
 #### 6. Structured Comparative Analysis via RAG Chat
 Interrogating the indexed corpus to automatically synthesize comparative tables comparing accuracy, architectures, and datasets across papers.
 
-<p align="center">
-  <a href="./screenshots/07_grounded_rag_chat_table.png">
-    <img src="./screenshots/07_grounded_rag_chat_table.png" alt="Figure 7: Grounded RAG Chat Comparative Table" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 7: Conversational query generating a rigorous comparative breakdown (CNN vs Spatial Transformer Networks vs AlexNet on GTSRB).</i></p>
+![Figure 7: Grounded RAG Chat Comparative Table](screenshots/07_grounded_rag_chat_table.png)
+
+*Figure 7: Conversational query generating a rigorous comparative breakdown (CNN vs Spatial Transformer Networks vs AlexNet on GTSRB).*
 
 * **Structured Markdown Synthesis:** Transforms fragmented PDF text into clear, multi-attribute comparative matrices.
 * **Strict Factuality Grounding:** System prompts constrain answers strictly to the ingested papers, refusing speculation.
@@ -162,12 +141,9 @@ Interrogating the indexed corpus to automatically synthesize comparative tables 
 #### 7. Verification Confidence Score & Cited Source Attribution
 Interactive citation badges and confidence metrics validating every generated claim against source manuscript passages.
 
-<p align="center">
-  <a href="./screenshots/08_confidence_score_sources.png">
-    <img src="./screenshots/08_confidence_score_sources.png" alt="Figure 8: Source Attribution and Confidence Score" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 8: High Confidence badge (98% grounded score) alongside expandable cited document sources and page references.</i></p>
+![Figure 8: Source Attribution and Confidence Score](screenshots/08_confidence_score_sources.png)
+
+*Figure 8: High Confidence badge (98% grounded score) alongside expandable cited document sources and page references.*
 
 * **Confidence Score Chip:** Real-time semantic cosine similarity score between generated response and retrieved source chunks.
 * **Source Drawer:** Clickable badges opening exact source paper names, section titles, and highlighted paragraph snippets.
@@ -179,12 +155,9 @@ Interactive citation badges and confidence metrics validating every generated cl
 #### 8. Deep Research Goal Specification
 Initiating an autonomous multi-step research inquiry by posing high-level research questions.
 
-<p align="center">
-  <a href="./screenshots/09_deep_research_setup.png">
-    <img src="./screenshots/09_deep_research_setup.png" alt="Figure 9: Deep Research Configuration" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 9: Specifying broad research objectives and selecting agent synthesis depth.</i></p>
+![Figure 9: Deep Research Configuration](screenshots/09_deep_research_setup.png)
+
+*Figure 9: Specifying broad research objectives and selecting agent synthesis depth.*
 
 * **Hypothesis Formulation:** Accepts open-ended questions (e.g. *“Analyze CNN architectural evolution and robustness challenges in GTSRB benchmarks”*).
 * **Depth Configuration:** Configurable exploration breadth and sub-topic decomposition parameters.
@@ -194,12 +167,9 @@ Initiating an autonomous multi-step research inquiry by posing high-level resear
 #### 9. Autonomous Agentic Research Planning & Execution
 The agent autonomously breaks down the primary objective into sequential sub-tasks, queries the vector database iteratively, and tracks execution status.
 
-<p align="center">
-  <a href="./screenshots/10_agentic_research_planning.png">
-    <img src="./screenshots/10_agentic_research_planning.png" alt="Figure 10: Multi-Step Agentic Plan Execution" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 10: Live agent execution tree showing active sub-queries, retrieval passes, and completed investigative stages.</i></p>
+![Figure 10: Multi-Step Agentic Plan Execution](screenshots/10_agentic_research_planning.png)
+
+*Figure 10: Live agent execution tree showing active sub-queries, retrieval passes, and completed investigative stages.*
 
 * **Dynamic Sub-query Generation:** Automatically decomposes complex prompts into 4–6 targeted semantic search vectors.
 * **Live Step-by-Step Telemetry:** Real-time visual progress indicators for every reasoning step and document retrieval query.
@@ -209,12 +179,9 @@ The agent autonomously breaks down the primary objective into sequential sub-tas
 #### 10. Real-Time Report Streaming & Synthesis
 Streaming synthesis consolidating findings across multiple retrieved passages into a cohesive academic narrative.
 
-<p align="center">
-  <a href="./screenshots/11_live_report_synthesis.png">
-    <img src="./screenshots/11_live_report_synthesis.png" alt="Figure 11: Real-Time Report Synthesis" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 11: Agent actively writing report sections, aggregating comparative data, and synthesizing conclusions.</i></p>
+![Figure 11: Real-Time Report Streaming & Synthesis](screenshots/11_live_report_synthesis.png)
+
+*Figure 11: Agent actively writing report sections, aggregating comparative data, and synthesizing conclusions.*
 
 * **Progressive Markdown Rendering:** Real-time token streaming with live section generation and formatting.
 * **Cross-Document Cross-Referencing:** Synthesizes consensus points and flags disagreements between authors.
@@ -224,12 +191,9 @@ Streaming synthesis consolidating findings across multiple retrieved passages in
 #### 11. Comprehensive Synthesized Academic Report
 The finalized deep research output formatted with formal academic headings, methodology evaluations, and export options.
 
-<p align="center">
-  <a href="./screenshots/12_comprehensive_research_report.png">
-    <img src="./screenshots/12_comprehensive_research_report.png" alt="Figure 12: Completed Comprehensive Research Report" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 12: Full synthesized report complete with Executive Summary, Technical Architecture Comparisons, Limitations, and Future Directions.</i></p>
+![Figure 12: Completed Comprehensive Research Report](screenshots/12_comprehensive_research_report.png)
+
+*Figure 12: Full synthesized report complete with Executive Summary, Technical Architecture Comparisons, Limitations, and Future Directions.*
 
 * **One-Click Export:** Download synthesized intelligence as standard Markdown (`.md`) or PDF.
 * **Persistent History:** Every run is automatically archived into the project's historical knowledge vault.
@@ -241,12 +205,9 @@ The finalized deep research output formatted with formal academic headings, meth
 #### 12. Automated Tabular Literature Review Matrix
 Instant multi-dimensional synthesis extracting key parameters across all papers into a standardized literature review table.
 
-<p align="center">
-  <a href="./screenshots/13_tabular_literature_review.png">
-    <img src="./screenshots/13_tabular_literature_review.png" alt="Figure 13: Tabular Literature Review Matrix" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 13: Literature review matrix standardizing Paper Name, Year, Core Methodology, Dataset, Evaluation Accuracy, and Identified Limitations.</i></p>
+![Figure 13: Tabular Literature Review Matrix](screenshots/13_tabular_literature_review.png)
+
+*Figure 13: Literature review matrix standardizing Paper Name, Year, Core Methodology, Dataset, Evaluation Accuracy, and Identified Limitations.*
 
 * **Zero-Effort Survey Creation:** Eliminates hours of manual data entry when preparing research paper related work sections.
 * **Gap Analysis:** Instantly reveals under-explored datasets, unaddressed environmental conditions, or performance ceilings.
@@ -256,12 +217,9 @@ Instant multi-dimensional synthesis extracting key parameters across all papers 
 #### 13. Historical Research Vault Explorer
 Persistent repository archiving all previous deep research investigations, synthesis runs, and comparative matrices.
 
-<p align="center">
-  <a href="./screenshots/14_historical_vault_explorer.png">
-    <img src="./screenshots/14_historical_vault_explorer.png" alt="Figure 14: Historical Research Vault Explorer" width="100%" />
-  </a>
-</p>
-<p align="center"><i>Figure 14: Historical vault explorer showing timestamped past research reports ready for instant review and re-export.</i></p>
+![Figure 14: Historical Research Vault Explorer](screenshots/14_historical_vault_explorer.png)
+
+*Figure 14: Historical vault explorer showing timestamped past research reports ready for instant review and re-export.*
 
 * **Local Snapshot Retention:** Full reports and queries saved locally in JSON/Markdown format.
 * **Instant Recall:** Search and reload prior research conclusions without re-running expensive LLM queries.
@@ -290,7 +248,6 @@ paper-insight-web/
 ├── PaperInsight.bat                # 🚀 One-click Windows launcher & auto-installer
 ├── Stop-Servers.bat                # 🛑 One-click graceful background server shutdown
 ├── docker-compose.yml              # 🐳 Multi-container Docker deployment configuration
-├── LICENSE                         # 📄 MIT Open-Source License
 ├── README.md                       # 📖 Showcase documentation with visual progress
 ├── .gitignore                      # 🛡️ Hardened ignore rules (protects API keys & data)
 │
@@ -422,12 +379,6 @@ For in-depth architectural analyses and engineering specifications, explore the 
 
 ## 👥 Authors & Academic Attribution
 
-Developed as an advanced academic research assistant project:
+Developed as an academic research assistant project:
 - **G Mohnish Krishna Sai Kumar** ([AV.SC.U4CSE23013])
 - **Pallapothu Moulika** ([AV.SC.U4CSE23036])
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
