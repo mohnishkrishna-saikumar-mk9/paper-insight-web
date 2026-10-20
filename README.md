@@ -37,10 +37,12 @@ Modern scientific research demands sifting through hundreds of dense, multi-colu
 
 PaperInsight operates on a decoupled client-server architecture with zero external database dependencies. All indexes and databases reside strictly on the local filesystem.
 
-<div align="center">
-  <img src="./screenshots/01_architecture_diagram.png" alt="PaperInsight System Architecture" width="950" />
-  <p><i>Figure 1: Full-stack Architectural Topology (Frontend, FastAPI Services, Local Storage & Inference Pipeline)</i></p>
-</div>
+<p align="center">
+  <a href="./screenshots/01_architecture_diagram.png">
+    <img src="./screenshots/01_architecture_diagram.png" alt="PaperInsight System Architecture" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 1: Full-stack Architectural Topology (Frontend, FastAPI Services, Local Storage & Inference Pipeline) — Click to view in full resolution.</i></p>
 
 ### Architectural Highlights
 1. **Frontend Layer (Next.js 14):** Modern React App Router interface built with custom dark/light UI tokens, fluid typography (`Hanken Grotesk` & `Literata`), optimistic UI updates, and real-time polling.
@@ -56,60 +58,213 @@ PaperInsight operates on a decoupled client-server architecture with zero extern
 
 ## 📸 Work Progress & Visual Walkthrough
 
-> **Note:** The following progress figures represent verified experimental results and test workflows conducted on real-world academic papers (Traffic Sign Recognition with Deep Learning) as documented in the technical project report.
-
-### Phase 1: Project Scoping & Workspace Creation
-Define isolated research workspaces with custom domain topics and contextual problem statements.
-
-| Empty Dashboard Overview | New Research Project Modal |
-| :---: | :---: |
-| ![Figure 2: Dashboard](./screenshots/02_project_dashboard_empty.png) | ![Figure 3: New Project Dialog](./screenshots/03_create_project_modal.png) |
-| *Figure 2: Clean dashboard showing active projects and provider status.* | *Figure 3: Configuring topic scope and specific research context.* |
+> **Note:** All screenshots below represent verified experimental runs on real-world academic papers (*Traffic Sign Recognition with Deep Learning*) from the project technical evaluation. Click any image to view it in full 1600×900 high resolution.
 
 ---
 
-### Phase 2: PDF Document Ingestion & Local Indexing
-Users drag and drop PDF files directly into the workspace. Ingestion parses text and generates vector embeddings synchronously—indexing 8+ academic papers in under 3 seconds.
+### Phase 1: Project Scoping & Workspace Management
 
-| Workspace Initial View | PDF Batch Selection | Indexed Papers Ready |
-| :---: | :---: | :---: |
-| ![Figure 4: Workspace](./screenshots/04_project_workspace_initial.png) | ![Figure 5: Upload](./screenshots/05_pdf_batch_upload.png) | ![Figure 6: Indexed](./screenshots/06_papers_indexed_and_ready.png) |
-| *Figure 4: Workspace before files are uploaded.* | *Figure 5: Batch selection of multi-column PDF files.* | *Figure 6: Eight papers indexed with relevance scoring.* |
+#### 1. Main Project Dashboard Overview
+The centralized command center provides a bird's-eye view of all research projects, active vector indices, and real-time backend/OmniRoute connectivity status.
+
+<p align="center">
+  <a href="./screenshots/02_project_dashboard_empty.png">
+    <img src="./screenshots/02_project_dashboard_empty.png" alt="Figure 2: PaperInsight Dashboard Overview" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 2: Main dashboard interface showcasing system health monitors, active provider status, and research project cards.</i></p>
+
+* **System Status Header:** Displays real-time API health, local vector store readiness, and configured LLM provider fallback.
+* **Workspace Cards:** Each project displays its primary domain scope, document count, last updated timestamp, and quick launch triggers.
+* **Quick Action Controls:** One-click triggers to initialize new projects, import shared workspaces, or open settings.
+
+<br />
+
+#### 2. Research Project Creation & Scope Definition
+Defining an isolated research workspace with targeted domain keywords and specific research problem statements to guide retrieval grounding.
+
+<p align="center">
+  <a href="./screenshots/03_create_project_modal.png">
+    <img src="./screenshots/03_create_project_modal.png" alt="Figure 3: Research Project Creation Modal" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 3: Project configuration modal specifying project title, description, and target research boundaries.</i></p>
+
+* **Isolated Context Boundaries:** Ensures literature uploaded to one project never contaminates or skews retrieval results of another.
+* **Research Focus Guidance:** Pre-conditions the agent's semantic query expansion around the user's specific problem statement.
 
 ---
 
-### Phase 3: Grounded RAG Chat with Citation & Confidence Tracking
-Query the indexed literature conversationally. Every claim is attributed to specific paper sources with automated confidence scoring.
+### Phase 2: PDF Document Ingestion & Local Vector Indexing
 
-| Comparative Chat Output | Confidence Score & Attribution |
-| :---: | :---: |
-| ![Figure 7: Chat Table](./screenshots/07_grounded_rag_chat_table.png) | ![Figure 8: Confidence](./screenshots/08_confidence_score_sources.png) |
-| *Figure 7: RAG chat generating structured comparative tables across models.* | *Figure 8: Verification chip showing high confidence and cited sources.* |
+#### 3. Initial Project Workspace
+The clean workspace view before manuscript ingestion, featuring intuitive drag-and-drop targets and document management controls.
+
+<p align="center">
+  <a href="./screenshots/04_project_workspace_initial.png">
+    <img src="./screenshots/04_project_workspace_initial.png" alt="Figure 4: Initial Project Workspace View" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 4: Fresh workspace ready for manuscript upload with navigation tabs (Overview, Papers, RAG Chat, Deep Research).</i></p>
+
+* **Multi-Tab Architecture:** Seamless navigation between document repository, grounded chat, autonomous deep research, and literature matrix generation.
+* **Storage Metrics:** Live tracking of local storage footprint and parsed document tokens.
+
+<br />
+
+#### 4. Batch Selection of Research Manuscripts
+Uploading multiple complex, multi-column scientific PDF papers simultaneously via native file dialog.
+
+<p align="center">
+  <a href="./screenshots/05_pdf_batch_upload.png">
+    <img src="./screenshots/05_pdf_batch_upload.png" alt="Figure 5: Batch PDF File Upload" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 5: Ingesting an 8-paper academic benchmark collection on Traffic Sign Recognition with Deep Learning.</i></p>
+
+* **High-Throughput Ingestion:** Supports simultaneous multi-paper uploads without freezing the UI.
+* **Format Flexibility:** Accommodates IEEE, ACM, arXiv, and Springer multi-column formatted research papers.
+
+<br />
+
+#### 5. Local Vector Indexing Complete & Papers Ready
+Synchronous local processing pipeline parsing PDF layouts, recursive semantic chunking, and embedding generation into FAISS.
+
+<p align="center">
+  <a href="./screenshots/06_papers_indexed_and_ready.png">
+    <img src="./screenshots/06_papers_indexed_and_ready.png" alt="Figure 6: Indexed Academic Literature Library" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 6: Indexed paper repository displaying file metadata, extraction status, chunk statistics, and relevance flags.</i></p>
+
+* **Zero Cloud Transfer:** All 8 papers embedded in memory with `all-MiniLM-L6-v2` in **under 3.2 seconds**.
+* **Document Management:** Individual paper deletion, status verification, and chunk inspection tools.
+
+---
+
+### Phase 3: Grounded RAG Chat with Attribution & Confidence Scoring
+
+#### 6. Structured Comparative Analysis via RAG Chat
+Interrogating the indexed corpus to automatically synthesize comparative tables comparing accuracy, architectures, and datasets across papers.
+
+<p align="center">
+  <a href="./screenshots/07_grounded_rag_chat_table.png">
+    <img src="./screenshots/07_grounded_rag_chat_table.png" alt="Figure 7: Grounded RAG Chat Comparative Table" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 7: Conversational query generating a rigorous comparative breakdown (CNN vs Spatial Transformer Networks vs AlexNet on GTSRB).</i></p>
+
+* **Structured Markdown Synthesis:** Transforms fragmented PDF text into clear, multi-attribute comparative matrices.
+* **Strict Factuality Grounding:** System prompts constrain answers strictly to the ingested papers, refusing speculation.
+
+<br />
+
+#### 7. Verification Confidence Score & Cited Source Attribution
+Interactive citation badges and confidence metrics validating every generated claim against source manuscript passages.
+
+<p align="center">
+  <a href="./screenshots/08_confidence_score_sources.png">
+    <img src="./screenshots/08_confidence_score_sources.png" alt="Figure 8: Source Attribution and Confidence Score" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 8: High Confidence badge (98% grounded score) alongside expandable cited document sources and page references.</i></p>
+
+* **Confidence Score Chip:** Real-time semantic cosine similarity score between generated response and retrieved source chunks.
+* **Source Drawer:** Clickable badges opening exact source paper names, section titles, and highlighted paragraph snippets.
 
 ---
 
 ### Phase 4: Autonomous Multi-Step Deep Research Agent
-Enter a complex research question. The agent autonomously designs a multi-point investigation plan, searches the vector index for each point, and synthesizes a comprehensive academic report.
 
-| 1. Deep Research Setup | 2. Agentic Research Planning |
-| :---: | :---: |
-| ![Figure 9: Topic Entry](./screenshots/09_deep_research_setup.png) | ![Figure 10: Plan Execution](./screenshots/10_agentic_research_planning.png) |
-| *Figure 9: Prompting the deep research agent with a broad goal.* | *Figure 10: Agent executing sub-queries step-by-step with live status.* |
+#### 8. Deep Research Goal Specification
+Initiating an autonomous multi-step research inquiry by posing high-level research questions.
 
-| 3. Real-Time Report Synthesis | 4. Final Comprehensive Synthesis |
-| :---: | :---: |
-| ![Figure 11: Synthesis](./screenshots/11_live_report_synthesis.png) | ![Figure 12: Final Report](./screenshots/12_comprehensive_research_report.png) |
-| *Figure 11: Real-time synthesis combining retrieved literature context.* | *Figure 12: Completed academic report with Markdown export and history save.* |
+<p align="center">
+  <a href="./screenshots/09_deep_research_setup.png">
+    <img src="./screenshots/09_deep_research_setup.png" alt="Figure 9: Deep Research Configuration" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 9: Specifying broad research objectives and selecting agent synthesis depth.</i></p>
+
+* **Hypothesis Formulation:** Accepts open-ended questions (e.g. *“Analyze CNN architectural evolution and robustness challenges in GTSRB benchmarks”*).
+* **Depth Configuration:** Configurable exploration breadth and sub-topic decomposition parameters.
+
+<br />
+
+#### 9. Autonomous Agentic Research Planning & Execution
+The agent autonomously breaks down the primary objective into sequential sub-tasks, queries the vector database iteratively, and tracks execution status.
+
+<p align="center">
+  <a href="./screenshots/10_agentic_research_planning.png">
+    <img src="./screenshots/10_agentic_research_planning.png" alt="Figure 10: Multi-Step Agentic Plan Execution" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 10: Live agent execution tree showing active sub-queries, retrieval passes, and completed investigative stages.</i></p>
+
+* **Dynamic Sub-query Generation:** Automatically decomposes complex prompts into 4–6 targeted semantic search vectors.
+* **Live Step-by-Step Telemetry:** Real-time visual progress indicators for every reasoning step and document retrieval query.
+
+<br />
+
+#### 10. Real-Time Report Streaming & Synthesis
+Streaming synthesis consolidating findings across multiple retrieved passages into a cohesive academic narrative.
+
+<p align="center">
+  <a href="./screenshots/11_live_report_synthesis.png">
+    <img src="./screenshots/11_live_report_synthesis.png" alt="Figure 11: Real-Time Report Synthesis" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 11: Agent actively writing report sections, aggregating comparative data, and synthesizing conclusions.</i></p>
+
+* **Progressive Markdown Rendering:** Real-time token streaming with live section generation and formatting.
+* **Cross-Document Cross-Referencing:** Synthesizes consensus points and flags disagreements between authors.
+
+<br />
+
+#### 11. Comprehensive Synthesized Academic Report
+The finalized deep research output formatted with formal academic headings, methodology evaluations, and export options.
+
+<p align="center">
+  <a href="./screenshots/12_comprehensive_research_report.png">
+    <img src="./screenshots/12_comprehensive_research_report.png" alt="Figure 12: Completed Comprehensive Research Report" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 12: Full synthesized report complete with Executive Summary, Technical Architecture Comparisons, Limitations, and Future Directions.</i></p>
+
+* **One-Click Export:** Download synthesized intelligence as standard Markdown (`.md`) or PDF.
+* **Persistent History:** Every run is automatically archived into the project's historical knowledge vault.
 
 ---
 
-### Phase 5: Automated Literature Review & Historical Vault
-Synthesize comprehensive literature review tables and store historical syntheses for instant recall.
+### Phase 5: Automated Literature Matrix & Historical Research Vault
 
-| Tabular Literature Review Matrix | Historical Research Vault Explorer |
-| :---: | :---: |
-| ![Figure 13: Literature Review](./screenshots/13_tabular_literature_review.png) | ![Figure 14: History](./screenshots/14_historical_vault_explorer.png) |
-| *Figure 13: Generating structured matrices (Methods, Limitations, Gaps).* | *Figure 14: History explorer retrieving past deep research reports.* |
+#### 12. Automated Tabular Literature Review Matrix
+Instant multi-dimensional synthesis extracting key parameters across all papers into a standardized literature review table.
+
+<p align="center">
+  <a href="./screenshots/13_tabular_literature_review.png">
+    <img src="./screenshots/13_tabular_literature_review.png" alt="Figure 13: Tabular Literature Review Matrix" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 13: Literature review matrix standardizing Paper Name, Year, Core Methodology, Dataset, Evaluation Accuracy, and Identified Limitations.</i></p>
+
+* **Zero-Effort Survey Creation:** Eliminates hours of manual data entry when preparing research paper related work sections.
+* **Gap Analysis:** Instantly reveals under-explored datasets, unaddressed environmental conditions, or performance ceilings.
+
+<br />
+
+#### 13. Historical Research Vault Explorer
+Persistent repository archiving all previous deep research investigations, synthesis runs, and comparative matrices.
+
+<p align="center">
+  <a href="./screenshots/14_historical_vault_explorer.png">
+    <img src="./screenshots/14_historical_vault_explorer.png" alt="Figure 14: Historical Research Vault Explorer" width="100%" />
+  </a>
+</p>
+<p align="center"><i>Figure 14: Historical vault explorer showing timestamped past research reports ready for instant review and re-export.</i></p>
+
+* **Local Snapshot Retention:** Full reports and queries saved locally in JSON/Markdown format.
+* **Instant Recall:** Search and reload prior research conclusions without re-running expensive LLM queries.
 
 ---
 
